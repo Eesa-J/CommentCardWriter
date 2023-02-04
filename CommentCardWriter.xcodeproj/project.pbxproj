@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BB7EFF64298E6F9E004219DA /* CommentCardWriterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF63298E6F9E004219DA /* CommentCardWriterApp.swift */; };
-		BB7EFF66298E6F9E004219DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF65298E6F9E004219DA /* ContentView.swift */; };
+		BB7EFF66298E6F9E004219DA /* WriterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF65298E6F9E004219DA /* WriterView.swift */; };
 		BB7EFF68298E6FA0004219DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EFF67298E6FA0004219DA /* Assets.xcassets */; };
 		BB7EFF6B298E6FA0004219DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EFF6A298E6FA0004219DA /* Preview Assets.xcassets */; };
 		BB7EFF75298E6FA0004219DA /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF74298E6FA0004219DA /* CommentCardWriterTests.swift */; };
 		BB7EFF7F298E6FA0004219DA /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF7E298E6FA0004219DA /* CommentCardWriterUITests.swift */; };
 		BB7EFF81298E6FA0004219DA /* CommentCardWriterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF80298E6FA0004219DA /* CommentCardWriterUITestsLaunchTests.swift */; };
+		BB7EFF91298E721F004219DA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF90298E721F004219DA /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		BB7EFF60298E6F9E004219DA /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EFF63298E6F9E004219DA /* CommentCardWriterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterApp.swift; sourceTree = "<group>"; };
-		BB7EFF65298E6F9E004219DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB7EFF65298E6F9E004219DA /* WriterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterView.swift; sourceTree = "<group>"; };
 		BB7EFF67298E6FA0004219DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7EFF6A298E6FA0004219DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB7EFF70298E6FA0004219DA /* CommentCardWriterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		BB7EFF7A298E6FA0004219DA /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EFF7E298E6FA0004219DA /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		BB7EFF80298E6FA0004219DA /* CommentCardWriterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB7EFF90298E721F004219DA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,10 @@
 		BB7EFF62298E6F9E004219DA /* CommentCardWriter */ = {
 			isa = PBXGroup;
 			children = (
+				BB7EFF8F298E7014004219DA /* Extensions */,
+				BB7EFF8E298E700B004219DA /* Model */,
+				BB7EFF8D298E6FF0004219DA /* View */,
 				BB7EFF63298E6F9E004219DA /* CommentCardWriterApp.swift */,
-				BB7EFF65298E6F9E004219DA /* ContentView.swift */,
 				BB7EFF67298E6FA0004219DA /* Assets.xcassets */,
 				BB7EFF69298E6FA0004219DA /* Preview Content */,
 			);
@@ -125,6 +129,29 @@
 				BB7EFF80298E6FA0004219DA /* CommentCardWriterUITestsLaunchTests.swift */,
 			);
 			path = CommentCardWriterUITests;
+			sourceTree = "<group>";
+		};
+		BB7EFF8D298E6FF0004219DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB7EFF65298E6F9E004219DA /* WriterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB7EFF8E298E700B004219DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB7EFF90298E721F004219DA /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB7EFF8F298E7014004219DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7EFF66298E6F9E004219DA /* ContentView.swift in Sources */,
+				BB7EFF66298E6F9E004219DA /* WriterView.swift in Sources */,
+				BB7EFF91298E721F004219DA /* Comment.swift in Sources */,
 				BB7EFF64298E6F9E004219DA /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
