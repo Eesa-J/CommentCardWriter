@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
-    var showComment = false
 
 struct WriterView: View {
+    @State private var showComment: Bool = false
+    let examples = Comment.exampleComments
+    
     var body: some View {
         VStack {
-            Button("Generate Comment", action: { showComment() })
-            if showComment == true {
-                Text(comment)
+            Button("Generate Comment", action: { examples.displayComment() })
+            if examples.showComment == true {
+                Text(examples.comments.randomElement() ?? "No comment could be generated")
             } else {
                 Text("")
             }

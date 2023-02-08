@@ -11,13 +11,17 @@ class Comment {
     let comments: [String]
     var showComment: Bool
     
-    init(comments: [String]) {
+    init(comments: [String], showcomment: Bool) {
         self.comments = comments
-        self.showComment = false
+        self.showComment = showComment
     }
     
     func displayComment() {
         showComment.toggle()
     }
+    
+    #if DEBUG
+    static let exampleComments = Comment(comments: ["Comment 1","Comment 2","Comment 3"])
+    #endif
     
 }
