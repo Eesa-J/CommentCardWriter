@@ -7,13 +7,13 @@
 
 import Foundation
 
-class Comment {
+class Comment: ObservableObject {
     let comments: [String]
-    var showComment: Bool
+    @Published var showComment: Bool
     
     init(comments: [String], showcomment: Bool) {
         self.comments = comments
-        self.showComment = showComment
+        self.showComment = showcomment
     }
     
     func displayComment() {
@@ -21,7 +21,7 @@ class Comment {
     }
     
     #if DEBUG
-    static let exampleComments = Comment(comments: ["Comment 1","Comment 2","Comment 3"])
+    static let exampleComments = Comment(comments: ["Comment 1","Comment 2","Comment 3"], showcomment: false)
     #endif
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB659CFF29A8EE6B00C24306 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB659CFE29A8EE6B00C24306 /* Subjects.swift */; };
 		BB7EFF64298E6F9E004219DA /* CommentCardWriterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF63298E6F9E004219DA /* CommentCardWriterApp.swift */; };
 		BB7EFF66298E6F9E004219DA /* WriterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7EFF65298E6F9E004219DA /* WriterView.swift */; };
 		BB7EFF68298E6FA0004219DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EFF67298E6FA0004219DA /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB659CFE29A8EE6B00C24306 /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		BB7EFF60298E6F9E004219DA /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EFF63298E6F9E004219DA /* CommentCardWriterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterApp.swift; sourceTree = "<group>"; };
 		BB7EFF65298E6F9E004219DA /* WriterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				BB7EFF90298E721F004219DA /* Comment.swift */,
+				BB659CFE29A8EE6B00C24306 /* Subjects.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB659CFF29A8EE6B00C24306 /* Subjects.swift in Sources */,
 				BB7EFF66298E6F9E004219DA /* WriterView.swift in Sources */,
 				BB7EFF91298E721F004219DA /* Comment.swift in Sources */,
 				BB7EFF64298E6F9E004219DA /* CommentCardWriterApp.swift in Sources */,
