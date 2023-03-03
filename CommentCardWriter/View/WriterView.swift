@@ -14,14 +14,27 @@ struct WriterView: View {
     @State private var selectedDivision: String = "CComX-1 - DPC"
     let divisions: [String] = ["CMdpW-3 - LJH", "CMdaY-5 - AW", "CComX-1 - DPC", "CComX-1 - MC", "CPhyV-2 - PDAM"]
     
+    @State private var value = 0
+    let numbers: [Int] = [0,1,2,3,4,5,6,7,8,9,10]
+
+    func incrementStep() {
+        value += 1
+        if value >= numbers.count { value = 0 }
+    }
+
+    func decrementStep() {
+        value -= 1
+        if value < 0 { value = numbers.count - 1 }
+    }
+    
     var body: some View {
         Form {
             Section {
-                Picker("Select your division", selection: $selectedDivision) {
+                Picker("Select your division:", selection: $selectedDivision) {
                     ForEach(divisions, id: \.self) {
                         Text("\($0)")
                     }
-                }
+                }.pickerStyle(.wheel).frame(height: 100).clipped()
             }
             
             Section(footer: Text("Have you performed well in assessed work?")) {
@@ -32,6 +45,18 @@ struct WriterView: View {
                 Slider(value: $effort, in: 0...100.0)
             }
             
+            Section() {
+                Stepper {
+                    Text("EWs not done / late  -   \(numbers[value].description)")
+                        .foregroundColor(.gray)
+                        .font(.callout)
+                } onIncrement: {
+                    incrementStep()
+                } onDecrement: {
+                    decrementStep()
+                }
+            }
+            
             VStack {
                 Button("Generate Comment", action: { examples.displayComment() })
                 
@@ -40,10 +65,12 @@ struct WriterView: View {
                 }
             }
 
-            Button(action: { print("To Do") }) {
+            Button(action: {
+                let pasteboard = UIPasteboard.general
+                pasteboard.string = examples.comments.randomElement()
+            }) {
                 Image(systemName: "doc.on.clipboard")
             }
-        
         }
     }
 }

@@ -21,7 +21,7 @@ class Comment: ObservableObject {
     }
     
     #if DEBUG
-    static let exampleComments = Comment(comments: ["Comment 1","Comment 2","Comment 3"], showcomment: false)
+    static let exampleComments = Comment(comments: ["Comment 1","Comment 1","Comment 1"], showcomment: false)
     #endif
     
 }
