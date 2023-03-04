@@ -11,7 +11,7 @@ struct WriterView: View {
     @ObservedObject var examples = Comment.exampleComments
     @State private var performedWell: Double = 50.0
     @State private var effort: Double = 50.0
-    @State private var selectedDivision: String = "CComX-1 - DPC"
+    @State private var selectedDivision: String = "CMdpW-3 - LJH"
     let divisions: [String] = ["CMdpW-3 - LJH", "CMdaY-5 - AW", "CComX-1 - DPC", "CComX-1 - MC", "CPhyV-2 - PDAM"]
     
     @State private var value = 0
@@ -34,7 +34,7 @@ struct WriterView: View {
                     ForEach(divisions, id: \.self) {
                         Text("\($0)")
                     }
-                }.pickerStyle(.wheel).frame(height: 100).clipped()
+                }.pickerStyle(.wheel).frame(height: 100)
             }
             
             Section(footer: Text("Have you performed well in assessed work?")) {
